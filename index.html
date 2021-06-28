@@ -4,34 +4,42 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
         <title>To-do list</title>
     </head>
     <body>
-        <h1>My <span>Todo</span> list</h1>
-        <div class="form-task">
-            <form id="create-task">
-                <label for="task-name">Agregar Tarea:</label>
-                <input type="text" id="task-name" value="">
-                <label for="category">Categoría:</label>
-                <select name="tarea" id="category">
-                    <option value="tarea">Tareas</option>
-                    <option value="compra">Compras</option>
-                    <option value="escuela">Escuelas</option>
-                </select>
-                <button type="submit">Add</button>
-            </form>
-        </div>
-        <div class="list">
-            <ul id="task-list">
-            <!--JS-->
-            </ul>
+        <div class="paul">
+            <h1>My <span>To do</span> list</h1>
+            <div class="form-task">
+                <form id="create-task">
+                    <label for="task-name" class="create-label">Agregar Tarea:</label>
+                    <input type="text" id="task-name" value="" class="create-input" placeholder="Nombre...">
+                    <label for="category">Categoría:</label>
+                    <select name="tarea" id="category" class="create-select">
+                        <option value="tarea">Tareas</option>
+                        <option value="compra">Compras</option>
+                        <option value="escuela">Escuelas</option>
+                    </select>
+                    <button type="submit" class="create_submit-btn">Add</button>
+                </form>
+            </div>
+            <div class="list">
+                <ul id="task-list">
+                <!--JS-->
+                </ul>
+            </div>
         </div>
         <div class="modal-background">
             <div class="modal-container">
-                <form id="edit-task">
-                    <label for="task-name-edit">Editar tarea:</label>
-                    <input type="text" id="task-name-edit" value="">
-                    <button type="submit">Guardar</button>
+                <div class="close-btn">
+                    <input type="image" src="./img/close.png" alt="close" class="close-modal close_modal-js">
+                </div>
+                <form id="edit-task" class="modal-edit">
+                    <label for="task-name-edit" class="modal_edit-label">Editar tarea:</label>
+                    <input type="text" id="task-name-edit" class="modal_edit-input" value="" placeholder="Nombre...">
+                    <button type="submit" class="modal_submit-btn">Guardar</button>
+                </form>
             </div>
         </div>
         <script src="main.js"></script>

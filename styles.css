@@ -1,0 +1,104 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Code Pro', monospace;
+}
+
+form{
+    font-size: 0;
+}
+h1{
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+}
+
+h1 span{
+    text-decoration: line-through;
+    color: gray;
+    font-weight: 300;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+.close-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.form-task{
+    display: table;
+    margin: 0 auto;
+}
+
+.modal-background{
+    background-color: rgba(14, 14, 14, 0.644);
+    width: 100vw;
+    height: 100vh;
+    position:relative;
+    overflow: hidden;
+}
+
+.modal-container{
+    background-color: #fff;
+    width: 550px;
+    height: 200px;
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    border: 2px solid #000;
+}
+
+.modal-edit{
+    padding-top:90px;
+    padding-left: 43px;
+}
+
+.modal_edit-label, .create-label{
+    border: 2px solid #000;
+    font-size: 16px;
+    padding: 10px;
+    display: inline;
+    width: 125px;
+}
+
+.modal_edit-input, .create-input{
+    border: 2px solid #000;
+    padding: 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 16px;
+    display: inline;
+}
+
+.modal_submit-btn, .create_submit-btn{
+    border: none;
+    padding: 12px;
+    background-color: #000;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.modal_submit-btn:hover, .create_submit-btn:hover{
+    border: 2px solid #000;
+    padding: 10px;
+    background-color: #fff;
+    color: #000; 
+}
+
+.create-select{
+    border: 2px solid #000;
+    font-size: 16px;
+    font-family: 'Source Code Pro', monospace;
+    padding: 9px;
+    display: inline;
+    width: 125px;
+}
+
+.paul{
+    display: none;
+}
