@@ -41,6 +41,7 @@ ul{
     height: 100vh;
     position:relative;
     overflow: hidden;
+    display: none;
 }
 
 .modal-container{
@@ -100,5 +101,5 @@ ul{
 }
 
 .paul{
-    display: none;
+    
 }
