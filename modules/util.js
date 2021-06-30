@@ -1,3 +1,5 @@
+
+// variables usadas en el proyecto
 const list = document.querySelector('#task-list'),
 formCreator = document.querySelector('#create-task'),
 selectCategory = document.querySelector('.create-select'),

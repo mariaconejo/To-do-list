@@ -8,6 +8,7 @@ import{executeModal, closeModal, rewrite, setName} from './modules/editModal.js'
 import{changeCheck} from './modules/checkChange.js';
 import{deleteTask, showDelete, deleteAllCheck} from './modules/delete.js';
 
+// Son funciones que tiene que estar ejecutando siempre 
 refresh();
 executeModal(editBtn);
 changeCheck(checkBox);
@@ -15,10 +16,10 @@ deleteTask(deleteBtn, listItems);
 showDelete(listItems, deleteAll);
 deleteAllCheck(deleteAll, checkBox, listItems);
 
+// Funcion principal 
 formCreator.addEventListener('submit',(e) => {
     
     e.preventDefault();
-
     let now = new Date(),
     id = createId(),
     name = formCreator.elements[0].value,
@@ -36,19 +37,18 @@ formCreator.addEventListener('submit',(e) => {
     deleteTask(deleteRefresh, listRefresh);
     showDelete(listRefresh, deleteAll);
     deleteAllCheck(deleteAll. checkRefresh, listRefresh);
-
     formCreator.elements[0].value = '';
 })
 
+// cierra el modal de editar
 closeBtn.addEventListener('click', (e)=>{
     e.preventDefault();
-
     closeModal();
 })
 
+// edita la tarea
 editForm.addEventListener('submit', (e)=>{
     e.preventDefault();
-
     rewrite(editForm.elements[0].value, editForm.getAttribute('data-id'), editForm.getAttribute('data-category'), editForm.getAttribute('data-date'));
     setName(editForm);
     editForm.elements[0].value = '';

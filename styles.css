@@ -19,15 +19,25 @@ h1 span{
     font-weight: 300;
 }
 
+li{
+    list-style: none;
+    padding: 20px;
+    border: 2px solid #000;
+}
+
 ul{
     padding: 0;
-    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 460px;
+    overflow: scroll;
+    overflow-x:hidden;
 }
 
 input[type="checkbox"]:checked + label {
     text-decoration: line-through;
     color: #999;
-  }
+}
 
 li[data-category="escuela"]{
     background-color: rgb(231, 125, 125);
@@ -38,6 +48,8 @@ li[data-category="tarea"]{
 li[data-category="compra"]{
   background-color: rgb(198, 162, 255);
 }
+
+
 .close-btn{
     position: absolute;
     right: 20px;
@@ -106,12 +118,18 @@ li[data-category="compra"]{
 }
 
 .create-select{
-    border: 2px solid #000;
+    border: 2px solid rgb(0, 0, 0);
     font-size: 16px;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
     padding: 9px;
     display: inline;
     width: 125px;
+}
+
+.removebtn{
+    display: block;
+    width: 300px;
+    margin: 0 auto;
 }
 
 /* JS */
@@ -121,8 +139,14 @@ li[data-category="compra"]{
 }
 .task{
     display: block; 
+    width: 589px;
+    margin: 0 auto;
 }
 .task_close-js{
     display: none;
 }
 
+.time_test-js{
+    margin: 0;
+    padding-left: 370px;
+}

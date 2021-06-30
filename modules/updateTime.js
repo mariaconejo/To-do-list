@@ -1,5 +1,6 @@
 import{timeAgo} from './timeAgo.js';
 
+// funcion que actualiza el tiempo de tarea realizado cada minuto
 function updateTime (){
     setTimeout(
         function (){

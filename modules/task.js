@@ -1,3 +1,5 @@
+// clase Tarea OOP
+
 class Task{
     constructor(id, name, category, date, check = false){
         this.id = id;

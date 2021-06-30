@@ -1,5 +1,6 @@
 import{remove} from './localStorage.js';
 
+// funcion que muestra el y esconde el boton borrar todo
 function showDelete(listItems, deleteAll){
     if (listItems.length > 0) {
         deleteAll.classList.remove('task_close-js');
@@ -7,6 +8,8 @@ function showDelete(listItems, deleteAll){
         deleteAll.classList.add('task_close-js');
     }
 }
+
+// funcion que borra todas las tareas realizadas
 function deleteAllCheck(deleteAll, checkBox, listItems){
     deleteAll.addEventListener('click', (e) =>{
         for (let i = 0; i < checkBox.length; i++) {
@@ -17,6 +20,7 @@ function deleteAllCheck(deleteAll, checkBox, listItems){
         }
     })
 }
+// funcion que borra cada tarea
 function deleteTask(deleteBtn, listItems){
     let arraylength = deleteBtn.length;
     for (let i = 0; i < arraylength; i++) {

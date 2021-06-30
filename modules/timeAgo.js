@@ -1,3 +1,5 @@
+// funcion que agrega el tiempo de creacion de la tarea
+
 function timeAgo(taskTime) {
     let thisMoment = new Date(),
     secondsConvert = (thisMoment.getTime() - taskTime.getTime()) / 1000,

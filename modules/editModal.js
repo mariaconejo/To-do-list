@@ -5,6 +5,7 @@ import Task from './task.js';
 let modal = document.querySelector('.modal-background'),
 todoList = document.querySelector('.task');
 
+// funcion que ejecuta el modal
 function executeModal(editBtn){
     let arraylength = editBtn.length;
     for (let i = 0; i < arraylength; i++) {
@@ -17,7 +18,7 @@ function executeModal(editBtn){
     })
     }
 }
-
+// funcion de abre el modal de editar tarea
 function editModal(id, category, date){
     modal.classList.add('modal_open-js');
     todoList.classList.add('task_close-js');
@@ -26,19 +27,21 @@ function editModal(id, category, date){
     editForm.setAttribute('data-date',`${date}`);
 }
 
+// funcion que cierra el modal de editar
 function closeModal(){
     modal.classList.remove('modal_open-js');
     todoList.classList.remove('task_close-js');
 }
 
+// funcion que rescribe la tarea
 function rewrite(text, id, category, date){
     let convertDate = new Date(date),
     newTask = new Task(id, text, category, convertDate);
     add(newTask);
     closeModal();
-
 }
 
+// funcion que cambia el nombre 
 function setName(editForm){
     let taskName = document.getElementsByClassName('task_name-js');
     for (let i = 0; i < taskName.length; i++) { 

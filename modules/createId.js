@@ -1,3 +1,5 @@
+
+// funcion que crea un id para cada tarea
 function createId(){
     let listObject = document.querySelectorAll('li'),
     newId;
