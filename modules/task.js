@@ -6,13 +6,6 @@ class Task{
         this.date = date;
         this.check = check;
     }
-    
-    edit(newName){
-        this.name = newName;
-    }
-    erase(){
-
-    }
 }
 
 export default Task;

@@ -24,6 +24,20 @@ ul{
     margin: 0;
 }
 
+input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #999;
+  }
+
+li[data-category="escuela"]{
+    background-color: rgb(231, 125, 125);
+}  
+li[data-category="tarea"]{
+  background-color: rgb(238, 202, 135);
+}
+li[data-category="compra"]{
+  background-color: rgb(198, 162, 255);
+}
 .close-btn{
     position: absolute;
     right: 20px;
@@ -105,11 +119,10 @@ ul{
 .modal_open-js{
     display: block;
 }
-
+.task{
+    display: block; 
+}
 .task_close-js{
     display: none;
 }
 
-.task{
-    display: block; 
-}

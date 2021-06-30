@@ -18,26 +18,27 @@ function chooseCategory(category){
     return choose;
 }
 
-function choosechecked(checked, id){
-    let inputCheck = !checked ? `<input type="checkbox" id="checkbox-${id}" data-id="${id}">` : `<input type="checkbox" id="checkbox-${id}" data-id="${id}" checked>`;
+function choosechecked(item){
+    let inputCheck = !item.check ? `<input type="checkbox" class="checkbox_item-js" id="checkbox-${item.id}" data-id="${item.id}" data-category="${item.category}" data-date="${item.date}" data-name="${item.name}" >` : `<input type="checkbox" class="checkbox_item-js" id="checkbox-${item.id}" data-id="${item.id}" data-category="${item.category}" data-date="${item.date}" data-name="${item.name}" checked>`;
 
     return inputCheck;
 }
 
-function addTask(item, time, checked = false){
+function addTask(item, time){
     let choose = chooseCategory(item.category),
-    inputCheck = choosechecked(checked, item.id),
+    inputCheck = choosechecked(item),
     pastTime = timeAgo(time),
     taskItem = document.createElement('li'),
     taskContent = `
         <img src="${choose}" alt="categoria">
         ${inputCheck}
-        <label for="checkbox-${item.id}" data-id="${item.id}">${item.name}</label>
-        <input type="image" src="${edit}" alt="editar" class="edit_btn-js" data-id="${item.id}" data-category="${item.category}" data-date="${item.date}">
-        <input type="image" src="${erase}" alt="borrar" class="delete_btn-js">
+        <label class="task_name-js" for="checkbox-${item.id}" data-id="${item.id}">${item.name}</label>
+        <input class="edit_btn-js" type="image" src="${edit}" alt="editar" data-id="${item.id}" data-category="${item.category}" data-date="${item.date}">
+        <input class="delete_btn-js" data-id="${item.id}" type="image" src="${erase}" alt="borrar" >
         <p data-time="${item.date}" class="time_test-js">${pastTime}</p>
     `;
     taskItem.setAttribute('data-id', `${item.id}`);
+    taskItem.setAttribute('data-category', `${item.category}`);
     taskItem.innerHTML = taskContent;
     list.appendChild(taskItem);
 }
