@@ -100,6 +100,16 @@ ul{
     width: 125px;
 }
 
-.paul{
-    
+/* JS */
+
+.modal_open-js{
+    display: block;
+}
+
+.task_close-js{
+    display: none;
+}
+
+.task{
+    display: block; 
 }

@@ -1,18 +1,18 @@
-const list = document.querySelectorAll('#task-list'),
-chores = './img/house.png',
-school = './img/book.png',
-shop = './img/house.png',
-edit = './img/edit.png',
-erase = './img/trash.png';
+const list = document.querySelector('#task-list'),
+formCreator = document.querySelector('#create-task'),
+selectCategory = document.querySelector('.create-select'),
+editBtn = document.querySelectorAll('.edit_btn-js'),
+deleteBtn = document.querySelectorAll('.delete_btn-js'),
+closeBtn = document.querySelector('.close-btn'),
+editForm = document.querySelector('.edit-task');
 
-let tasksArray = [];
 
 export {
     list,
-    chores,
-    school,
-    shop,
-    erase,
-    edit,
-    tasksArray
+    formCreator,
+    selectCategory,
+    editBtn,
+    deleteBtn,
+    closeBtn,
+    editForm
 };

@@ -1,10 +1,10 @@
 class Task{
-    constructor(id, name, category, check, date){
+    constructor(id, name, category, date, check = false){
         this.id = id;
         this.name = name;
         this.category = category;
-        this.check = check;
         this.date = date;
+        this.check = check;
     }
     
     edit(newName){
@@ -14,3 +14,5 @@ class Task{
 
     }
 }
+
+export default Task;
